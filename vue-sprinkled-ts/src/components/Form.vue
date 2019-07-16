@@ -8,20 +8,22 @@
       <div class="field">
         <label class="label">First Name</label>
         <div class="control">
-          <input type="text" class="input" placeholder="First Name" v-model="firstName">
+          <input v-validate="'required'" name="First Name" type="text" class="input" placeholder="First Name" v-model="firstName">
         </div>
+        <p class="help is-danger" v-if="errors.first('First Name')">{{ errors.first('First Name') }}</p>
       </div>
 
       <div class="field">
         <label class="label">Last Name</label>
         <div class="control">
-          <input type="text" class="input" placeholder="astst Name" v-model="lastName">
+          <input v-validate="'required'" name="Last Name" type="text" class="input" placeholder="Last Name" v-model="lastName">
         </div>
+        <p class="help is-danger" v-if="errors.first('Last Name')">{{ errors.first('Last Name') }}</p>
       </div>
 
       <div class="field">
         <div class="control">
-          <button class="button is-danger" @click="sayHello">Alert</button>
+          <button class="button is-primary" @click="submit">Submit Form</button>
         </div>
       </div>
     </form>
@@ -40,10 +42,12 @@ export default class Form extends Vue {
     return `${this.firstName} ${this.lastName}`;
   }
 
-  public sayHello(event: MouseEvent) {
+  public async submit(event: MouseEvent) {
     event.preventDefault();
 
-    alert(`Hello, ${this.fullName}`);
+    const valid = await this.$validator.validate();
+
+    console.log(valid);
   }
 }
 </script>
