@@ -1,0 +1,27 @@
+{
+  "name": "vue-sprinkled-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html --port 8080"
+  },
+  "author": "Rowell Heria <rowell.heria@answerdigital.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.0.0",
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.22.5",
+    "typescript": "^3.5.3",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "bulma": "^0.7.5",
+    "components": "^0.1.0",
+    "tslib": "^1.10.0",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.1.0",
+    "vue-hot-reload-api": "^2.3.3",
+    "vue-property-decorator": "^8.2.1"
+  }
+}
