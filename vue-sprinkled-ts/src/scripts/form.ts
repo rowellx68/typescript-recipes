@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import VeeValidate from 'vee-validate';
+import Form from '~/components/Form.vue';
 
+Vue.config.productionTip = false;
 Vue.use(VeeValidate, {
   delay: 500,
   classes: true,
@@ -12,7 +14,5 @@ Vue.use(VeeValidate, {
     untouched: '',
   }
 });
-
-import Form from '~/components/Form.vue';
 
 new Vue(Form).$mount('#form');
