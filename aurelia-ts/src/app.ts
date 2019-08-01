@@ -7,6 +7,7 @@ export class App {
       {
         route: '/',
         title: 'Home',
+        name: 'home',
         moduleId: PLATFORM.moduleName('pages/home/home-layout'),
       }
     ]);
